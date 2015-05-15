@@ -5,6 +5,7 @@ language: node_js
 node_js:
   - "0.10"
 script:
+  - "npm install hexo-cli -g"
   - "hexo generate"
 after_success:
   - "git clone https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
