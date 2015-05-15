@@ -8,16 +8,8 @@ script:
   - "npm install hexo-cli"
   - "hexo generate --watch"
 after_success:
-  - "git clone --branch=public https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
+  - "git clone  https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
   - "ls git_deploy"
-  - "rm -r git_deploy/*"
-  - "cp -r public/* git_deploy/"
-  - "git config --global push.default simple"
-  - "git config --global user.name 'z-ji'"
-  - "git config --global user.email me@z-ji.info"
-  - "git add -A"
-  - "git commit -m 'update'"
-  - "git push -q"
 env:
   global:
     secure: Rnrnt4pigCR8jh1r9IVPj5mNY5+IIDShjL1NHjkatzHopThq1ocwqkeXw40zEwEpylHs2hj2lx8GUX/Zg8g3dcR5ej+zFzyIpYXrZgQ+1pit3/CbjzhIu6HhwuzCpqg0Ry6a68lRxdhYXFGB8kJKxPSA8P7hkRluByvt673/YRNfcBiORmffdXrA7U6CLwSUysLjDZgw2Rm2PAcMiVTt5Qwo6eAQEijdmFh7zRsG5gldKf7/tBQ7SqNfjmCCHoYrHXL3hgRXgiaO2XmgjgETDTg4DsFhIeUuGE9B6+OanyxLXIhtejIPLz2Pnj2BPReEOu4fCOLlidKSIuTAVw0HC+bAFm/CaqoBNoWBfHu96kuTFtXdIG6lJCp0/ea/0rzkcAo9YvUWOIaf9WRHhWQopi8pvvkTW+i91LZaYRiaDiPpiYY9IYab10OBWP9+M+BuB+qta5OYielx6wPHZNwhWHWTGVFEvlD+8wtVTKBzMt7MSWCVtXfyT7X5NSlMTP5D8ozg2K1q6ay/W+SQ/RdJPwWAtb5Qjaj8K9jr2njtFh4na3t8iBAiyQjbzgk4JDpMbjvf/PhOdkrN7DH2o0q4yM3WvGpiKJ2JlIaQ8ddT9olN8ui7MAdQb1fkfr9DJUtLEEeE+s03pmtIbJKm/XQU7EzeLZ/ukMQ5GcdUVUVukus=
