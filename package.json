@@ -6,11 +6,10 @@
     "version": "3.0.0"
   },
   "dependencies": {
-    "hexo-migrator-wordpress": "^0.1.1",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-jade": "^0.1.0",
     "hexo-renderer-less": "^0.1.2",
-    "hexo-renderer-marked": "*",
+    "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "*"
   }
 }
