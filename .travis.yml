@@ -6,15 +6,9 @@ node_js:
   - "0.10"
 script:
   - "npm install hexo-cli"
-  - "hexo generate"
+  - "hexo generate --watch"
 after_success:
-  - "git clone https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
-  - "cd git_deploy"
-  - "git checkout public"
-  - "pwd"
-  - "ls -l"
-  - " cd .."
-  - " ls -l"
+  - "git clone --branch=public https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
   - "rm -r git_deploy/*"
   - "cp -r public/* git_deploy/"
   - "git config --global push.default simple"
