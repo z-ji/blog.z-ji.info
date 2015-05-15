@@ -4,11 +4,8 @@ branches:
 language: node_js
 node_js:
   - "0.12"
-before_install:
-  - npm install -g hexo-cli
-install:
-  - npm install
 script:
+  - "npm install hexo-cli -g"
   - "hexo generate --watch"
 after_success:
   - "git clone --branch=public https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
