@@ -5,14 +5,14 @@ language: node_js
 node_js:
   - "0.10"
 script:
-  - "npm install hexo-cli -g"
+  - "npm install hexo-cli"
   - "hexo generate"
 after_success:
   - "git clone https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
-  - "git checkout public"
-  - "rm -r git_deploy/*"
-  - "cp -r public/* git_deploy"
   - "cd git_deploy"
+  - "git checkout public"
+  - "rm -r *"
+  - "cp -r ../public/* ./"
   - "git config --global push.default simple"
   - "git config --global user.name 'z-ji'"
   - "git config --global user.email me@z-ji.info"
