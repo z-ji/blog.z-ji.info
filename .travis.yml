@@ -6,6 +6,7 @@ node_js:
   - "0.12"
 script:
   - "npm install hexo --save"
+  - "hexo version"
   - "hexo generate"
 after_success:
   - "git clone --branch=public https://$GH_TOKEN@github.com/z-ji/blog.z-ji.info.git git_deploy"
